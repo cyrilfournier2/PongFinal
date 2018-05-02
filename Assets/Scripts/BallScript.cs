@@ -170,6 +170,7 @@ public class BallScript : MonoBehaviour {
 
         Debug.Log("Resetball " + rb.velocity);
         StartCoroutine(StartLoader());
+        ResetScore();
     }
 
     /*
@@ -179,10 +180,8 @@ public class BallScript : MonoBehaviour {
     {
         Debug.Log("Startloader 1");
         yield return new WaitForSeconds(3);
-
-        Debug.Log("Startloader 2");
-        ResetScore();
-        Invoke("GoBall", 1);  
+        Debug.Log("Startloader 2");        
+        Invoke("GoBall", 1);
     }
 
     /*
